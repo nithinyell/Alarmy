@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		593181322FDDB6340093B813 /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = 593181312FDDB6340093B813 /* NetworkManager */; };
+		59F464152FDDC14C00DC470B /* Analytics in Frameworks */ = {isa = PBXBuildFile; productRef = 59F464142FDDC14C00DC470B /* Analytics */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		59AFC1272FDDB19800D12DF8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				593181322FDDB6340093B813 /* NetworkManager in Frameworks */,
+				59F464152FDDC14C00DC470B /* Analytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = Alarmy;
 			packageProductDependencies = (
+				593181312FDDB6340093B813 /* NetworkManager */,
+				59F464142FDDC14C00DC470B /* Analytics */,
 			);
 			productName = Alarmy;
 			productReference = 59AFC1162FDDB19700D12DF8 /* Alarmy.app */;
@@ -195,6 +204,10 @@
 			);
 			mainGroup = 59AFC10D2FDDB19600D12DF8;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				593181302FDDB6340093B813 /* XCLocalSwiftPackageReference "../NetworkManager" */,
+				59F464132FDDC14C00DC470B /* XCLocalSwiftPackageReference "../Analytics" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 59AFC1172FDDB19700D12DF8 /* Products */;
 			projectDirPath = "";
@@ -395,7 +408,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Alarmy/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -423,7 +436,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Alarmy/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -552,6 +565,28 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		593181302FDDB6340093B813 /* XCLocalSwiftPackageReference "../NetworkManager" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../NetworkManager;
+		};
+		59F464132FDDC14C00DC470B /* XCLocalSwiftPackageReference "../Analytics" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Analytics;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		593181312FDDB6340093B813 /* NetworkManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkManager;
+		};
+		59F464142FDDC14C00DC470B /* Analytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Analytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 59AFC10E2FDDB19700D12DF8 /* Project object */;
 }
