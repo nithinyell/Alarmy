@@ -74,6 +74,10 @@ final class AlarmyViewModel {
         sortAlarms()
         scheduler()
     }
+    
+    func deleteAlarm(at offsets: IndexSet) {
+        alarms.remove(atOffsets: offsets)
+    }
 
     func scheduler() {
         alarmScheduler.scheduleNextAlarm(from: alarms)

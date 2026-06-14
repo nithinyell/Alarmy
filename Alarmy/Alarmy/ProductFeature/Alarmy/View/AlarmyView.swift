@@ -31,14 +31,7 @@ struct AlarmyView: View {
                 }
                 .font(.title)
             case .loaded:
-                List(viewModel.alarms) { alarm in
-                    NavigationLink {
-                        AlarmFormView(viewModel: viewModel, mode: .edit(alarm))
-                    } label: {
-                        AlarmRowView(alarm: alarm)
-                    }
-                    .alignmentGuide(.listRowSeparatorLeading) { _ in 0 }
-                }
+                alarmsBody
             }
         }
         .task {
@@ -68,6 +61,28 @@ struct AlarmyView: View {
         .sheet(isPresented: $showAddAlarm) {
             NavigationStack {
                 AlarmFormView(viewModel: viewModel, mode: .add)
+            }
+        }
+    }
+    
+    @ViewBuilder
+    var alarmsBody: some View {
+        if viewModel.alarms.isEmpty {
+            Text("Add Alarms")
+                .font(.title)
+                .foregroundStyle(.secondary)
+        } else {
+            List {
+                ForEach(viewModel.alarms) { alarm in
+                    NavigationLink {
+                        AlarmFormView(viewModel: viewModel, mode: .edit(alarm))
+                    } label: {
+                        AlarmRowView(alarm: alarm)
+                    }
+                    .alignmentGuide(.listRowSeparatorLeading) { _ in 0 }
+                }.onDelete { offset in
+                    viewModel.deleteAlarm(at: offset)
+                }
             }
         }
     }
